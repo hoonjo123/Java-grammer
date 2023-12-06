@@ -51,21 +51,50 @@ public class C05LoopStatements {
 ////
 
         //배열과 Enhanced for 문
-        int[] myArr = {1,5,7,9,10}; //0번째값이 1, 1번째 값이 5....
-//        System.out.println(myArr[2]);  //7
-        for(int i = 0; i<5; i++){
-            System.out.println(myArr[i]);
-            myArr[i]=myArr[i]+10;
-        }
-        System.out.println(Arrays.toString(myArr));
+//        int[] myArr = {1, 5, 7, 9, 10}; //0번째값이 1, 1번째 값이 5....
+////        System.out.println(myArr[2]);  //7
+//        for (int i = 0; i < 5; i++) {
+//            System.out.println(myArr[i]);
+//            myArr[i] = myArr[i] + 10;
+//        }
+//        System.out.println(Arrays.toString(myArr));
 //        for(int a : myArr){
 //            System.out.println(a);
 //        }
         //일반 for문을 써서 myArr에 10씩 더한 후에 출력 /
-        int sum = 0;
-        for(int a : myArr){
-            sum += a;
-        }
-        System.out.println(sum);
+//        int sum = 0;
+//        for (int a : myArr) {
+//            sum += a;
+//            System.out.println(sum);
+//        }
+//        //다중반복문
+//        2단부터 9단 전부 출력하되 주의사항으로 몇단입니다 주르륵 몇단입니다 주르륵 나오게
+//        while (true) {
+//            Scanner sc = new Scanner(System.in);
+//            System.out.println("구구단을 외자! 구구단을 외자!");
+//            int input = sc.nextInt();
+//            int a = 2;
+//            while (a < 10) {
+//                System.out.println(input + " X " + a + " = " + input * a);
+//                a++;
+//            }
+//            break;
+//        }
+//
+//        for(int i = 2; i < 10; i++){
+//            System.out.println(i + "단입니다");
+//            for(int k = 1; k < 10; k++){
+//                System.out.println(i + " X " + k + "=" + i * k);
+//            }
+//        }
+//
+        int[][] arr = {{1, 2, 3, 4}, {5, 7,8}};
+        for(int k = 0;  k<arr.length; k++){
+            for(int i =0; i<arr[k].length; i++){
+                System.out.println(arr[k][i]);
+            }
 
+
+        }
+    }
 }
