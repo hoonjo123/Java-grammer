@@ -65,6 +65,7 @@ public class C02Variable {
 //        if(bool_nu1 > bool_nu2){
 //            System.out.println("조건식이 참입니다.");
 //        }
+        //boolean도 기본만 선언하면 기본값은 false;
 //
 //        //묵시적 타입변환
 //        char ch1 = 'a';
