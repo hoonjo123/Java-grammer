@@ -68,7 +68,7 @@ public class C05LoopStatements {
 //            System.out.println(sum);
 //        }
 //        //다중반복문
-//        2단부터 9단 전부 출력하되 주의사항으로 몇단입니다 주르륵 몇단입니다 주르륵 나오게
+//        2단부터 9단 전부 출력하되 몇단입니다 주르륵 몇단입니다 주르륵 나오게
 //        while (true) {
 //            Scanner sc = new Scanner(System.in);
 //            System.out.println("구구단을 외자! 구구단을 외자!");
@@ -87,14 +87,22 @@ public class C05LoopStatements {
 //                System.out.println(i + " X " + k + "=" + i * k);
 //            }
 //        }
-//
-        int[][] arr = {{1, 2, 3, 4}, {5, 7,8}};
-        for(int k = 0;  k<arr.length; k++){
-            for(int i =0; i<arr[k].length; i++){
-                System.out.println(arr[k][i]);
+////
+//        int[][] arr = {{1, 2, 3, 4}, {5, 7,8}};
+//        for(int k = 0;  k<arr.length; k++){
+//            for(int i =0; i<arr[k].length; i++){
+//                System.out.println(arr[k][i]);
+//            }
+        //1부터 5까지 반복이 되고 , 2번째 for문은 0부터 4까지반복이 되는데 2번째 for문에
+        loop1:
+        for(int i=0;i<5;i++){
+            loop2:
+            for(int j=0;j<5;j++){
+                System.out.println("hello world");
+                if(j==2) {
+                    break loop1;
+                }
             }
-
-
         }
     }
 }

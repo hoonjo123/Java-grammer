@@ -5,7 +5,7 @@ public class C05LoopPractice {
 //        int plus = 0;
 //        for(int i=0;i<21;i++){
 //            if(i%2==0){
-//                plus = plus + i;
+//                plus += i;
 //            }
 //        }
 //        System.out.println(plus);
@@ -39,10 +39,32 @@ public class C05LoopPractice {
 //        }
 //        System.out.println(Max);
 
-
-
-
-
-
+        //라벨문 활용1, target이 matrix의 i,j번째 배열에 있는지 출력하기,target을 찾으면 반복문 전체종료/처음부터 끝까지 뒤지셈
+//        int[][]matrix = {{1,2,3,4},{5,6,7},{8,9},{10,11,12,13,14}};
+//        int target = 11;
+//        l1:
+//        for(int k=0; k<matrix.length; k++){
+//            for(int j=0; j<matrix[k].length; j++){
+//                if (matrix[k][j] == target){
+//                    System.out.println(k + "," + j + "번째에 있습니다.");
+//                    break l1;
+//                }
+//            }
+//        }
+        //[약수찾기] 1~20 이 있을 때, 이 중에 약수가 5개 이상인 숫자중에 가장 작은 값을 구하시오. 불필요한 추가반복은 금지.
+      int answer = 0;
+      for(int i =1;i<21;i++){
+          int count =0;
+          for(int j=1;j<=i;j++) {
+              if (i % j == 0) {
+                  count++;
+              }
+          }
+          if(count>=5){
+              answer = i;
+              break;
+          }
+      }
+        System.out.println(answer);
     }
 }

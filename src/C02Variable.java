@@ -84,23 +84,27 @@ public class C02Variable {
 //        char my_char2 = 'b';
 //        int char_num = (int)my_char2;
         //int a가 1이고 int b가 4일때 둘을 나눈값을 int에 담아 출력,  double에 담아 출력
-        int a = 1;
-        int b = 4;
-        int result = a/b;
-        System.out.println(result);
-        double result1 = a/b;
-        System.out.println(result1); //java에서 int로 묵시적으로 실행함
+//        int a = 1;
+//        int b = 4;
+//        int result = a/b;
+//        System.out.println(result);
+//        double result1 = a/b;
+//        System.out.println(result1); //java에서 int로 묵시적으로 실행함
 
         //변수와 상수
         //선언과 동시에 초기화
-        int a1 = 10;
+//        int a1 = 10;
          //a1을 20으로 변경
-        a1 = 20;
+//        a1 = 20;
             //선언만 한 뒤에 나중에 초기화
-        int a2;//선언만 됐을때는 값이 0으로 초기화
+//        int a2;//선언만 됐을때는 값이 0으로 초기화 되지 않으나 객체로 선언될 때는 0으로 초기화
+//        a2 = 20;
+        int a2;
         a2 = 20;
+        int[]myArray = new int[5];
+        System.out.println(myArray[4]);
             //상수는 값의 재할당이 불가능
-        final int ages = 20;
+//        final int ages = 20;
         // ages = 30; <- 재할당이 불가능 오류가난다.
 
     }
