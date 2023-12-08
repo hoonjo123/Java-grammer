@@ -206,7 +206,68 @@ public class C06String {
 //        arr[0] = "hello";
 //        arr[1] = "world";
 
+        //join함수 , String 배열을 String으로 변환하는 것. String[] -> String   String.join(클래스 메서드)
+//        String.join("-",배열명);
+//        String[] myArr = {"a","b","c"}; //1. 배열선언 2.랭귀지 나열 3. join으로 공백한칸 조건으로 출력
+//        String[] myLanguage = {"SQL","JAVA","CSS","HTML","C++"};
+//        String myjoin = String.join(" ", myLanguage);
+//        System.out.println(myjoin);
 //
-//    }
-//}
+//        //String buffer
+//        StringBuffer sb1 = new StringBuffer("hello");
+//        System.out.println(sb1); //타입은 String buffer / 값을 return 시, toString으로 변환
+//        sb1.append(" world!");
+//        System.out.println(sb1);
+//        sb1.insert(6,"java ");
+//        System.out.println(sb1);
+//        System.out.println(sb1.substring(6,10));
+//        sb1.delete(6,11);
+//        System.out.println(sb1);
 //
+        //성능 : String < StringBuffer < StringBuilder (쓰레드 safe x)
+//        StringBuilder sb2 = new StringBuilder(("hello"));
+//        sb2.append("world");
+//        System.out.println(sb2);
+
+        //프로그래머스 문제 - 문제반복출력하기
+//        String my_string = "hello";
+//        int n = 3;// hhheeellllllooo
+//        StringBuilder sb = new StringBuilder();
+//        for(int i = 0; my_string.length()>i; i++){
+//            for(int j = 0; j<n; j++){
+//                sb.append(my_string.charAt(i));
+//            }
+//        }
+//        System.out.println(sb);
+//        System.out.println(sb.toString());
+
+//        StringBuilder sb = new StringBuilder();
+
+//        String A = "Hello";
+//        String B = "oHell";
+//        for(int i = 0; A.length() > i;i++ ){
+//            sb.delete(A.length()-1,A.length());
+//            sb.insert(0,A.charAt(A.length()-1));
+//            sb.toString();
+//            System.out.println(sb);
+//        }
+
+        String A = "Hello";
+        String B = "oHell";
+        int answer = 0;
+        StringBuilder sb = new StringBuilder(A);
+        while(true){
+            if(sb.toString().equals(B)){
+                break;
+            }
+            answer++;
+            sb.insert(0,sb.charAt(sb.length()-1));
+            sb.delete(sb.length()-1,sb.length());
+            if(answer>A.length()-1){
+                answer = -1;
+                break;
+            }
+        }//for문은 사진첩에
+    }
+}
+
