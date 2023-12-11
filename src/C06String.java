@@ -252,22 +252,22 @@ public class C06String {
 //            System.out.println(sb);
 //        }
 
-        String A = "Hello";
-        String B = "oHell";
-        int answer = 0;
-        StringBuilder sb = new StringBuilder(A);
-        while(true){
-            if(sb.toString().equals(B)){
-                break;
-            }
-            answer++;
-            sb.insert(0,sb.charAt(sb.length()-1));
-            sb.delete(sb.length()-1,sb.length());
-            if(answer>A.length()-1){
-                answer = -1;
-                break;
-            }
-        }//for문은 사진첩에
+//        String A = "Hello";
+//        String B = "oHell";
+//        int answer = 0;
+//        StringBuilder sb = new StringBuilder(A);
+//        while(true){
+//            if(sb.toString().equals(B)){
+//                break;
+//            }
+//            answer++;
+//            sb.insert(0,sb.charAt(sb.length()-1));
+//            sb.delete(sb.length()-1,sb.length());
+//            if(answer>A.length()-1){
+//                answer = -1;
+//                break;
+//            }
+//        }//for문은 사진첩에
     }
 }
 
