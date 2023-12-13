@@ -51,13 +51,13 @@ public class C05LoopStatements {
 ////
 
         //배열과 Enhanced for 문
-//        int[] myArr = {1, 5, 7, 9, 10}; //0번째값이 1, 1번째 값이 5....
-////        System.out.println(myArr[2]);  //7
-//        for (int i = 0; i < 5; i++) {
+        int[] myArr = {1, 5, 7, 9, 10}; //0번째값이 1, 1번째 값이 5....
+//        System.out.println(myArr[2]);  //7
+        for (int i = 0; i < 5; i++) {
 //            System.out.println(myArr[i]);
-//            myArr[i] = myArr[i] + 10;
-//        }
-//        System.out.println(Arrays.toString(myArr));
+            myArr[i] = myArr[i] + 10;
+        }
+        System.out.println(Arrays.toString(myArr));
 //        for(int a : myArr){
 //            System.out.println(a);
 //        }
@@ -65,7 +65,7 @@ public class C05LoopStatements {
 //        int sum = 0;
 //        for (int a : myArr) {
 //            sum += a;
-//            System.out.println(sum);
+//            System.out.println(sum);}
 //        }
 //        //다중반복문
 //        2단부터 9단 전부 출력하되 몇단입니다 주르륵 몇단입니다 주르륵 나오게
@@ -93,16 +93,16 @@ public class C05LoopStatements {
 //            for(int i =0; i<arr[k].length; i++){
 //                System.out.println(arr[k][i]);
 //            }
-        //1부터 5까지 반복이 되고 , 2번째 for문은 0부터 4까지반복이 되는데 2번째 for문에
-        loop1:
-        for(int i=0;i<5;i++){
-            loop2:
-            for(int j=0;j<5;j++){
-                System.out.println("hello world");
-                if(j==2) {
-                    break loop1;
-                }
-            }
+            //1부터 5까지 반복이 되고 , 2번째 for문은 0부터 4까지반복이 되는데 2번째 for문에
+//        loop1:
+//        for(int i=0;i<5;i++){
+//            loop2:
+//            for(int j=0;j<5;j++){
+//                System.out.println("hello world");
+//                if(j==2) {
+//                    break loop1;
+//                }
+//            }
+//        }
         }
     }
-}

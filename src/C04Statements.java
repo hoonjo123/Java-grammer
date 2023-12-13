@@ -1,7 +1,7 @@
 import java.util.Scanner;
 //
-//public class C04Statements {
-//    public static void main(String[] args) {
+public class C04Statements {
+    public static void main(String[] args) {
         //도어락 비밀번호 1234 , 스캐너를 써서 사용자의 input값을 int로 받아서 만약에 비밀번호와 사용자의 input이 일치하면
         //"문이 열렸습니다." 일치하지 않으면 "비밀번호가 틀렸습니다."를 출력해보자
 //        Scanner a10 = new Scanner(System.in);
@@ -113,5 +113,5 @@ import java.util.Scanner;
 ////            }
 ////
 //        }
-//    }
-//}
+    }
+}

@@ -48,50 +48,52 @@ public class C09Map {
 //            System.out.println(myIter.next());
 //        }
 // 아래의 리스트를 가지고 좋아하는 운동종목과 사람숫자를 map형태로 나타내시오.
-        List<String> myList = new ArrayList<>();
-        myList.add("baseketball");
-        myList.add("baseketball");
-        myList.add("baseketball");
-        myList.add("tennis");
-        myList.add("tennis");
-        myList.add("tennis");
-        myList.add("baseball");
-        myList.add("baseball");
-        myList.add("baseball");
-
-        Map<String, Integer> myMap = new HashMap<>();
-        for (String a : myList) {
-            if (myMap.containsKey(a)) {
-                myMap.put(a, myMap.get(a) + 1);
-            } else {
-                myMap.put(a, 1);
-            }
-            myMap.put(a, myMap.getOrDefault(a,0)+1);
-        }
+//        List<String> myList = new ArrayList<>();
+//        myList.add("baseketball");
+//        myList.add("baseketball");
+//        myList.add("baseketball");
+//        myList.add("tennis");
+//        myList.add("tennis");
+//        myList.add("tennis");
+//        myList.add("baseball");
+//        myList.add("baseball");
+//        myList.add("baseball");
+//
+//        Map<String, Integer> myMap = new HashMap<>();
+//        for (String a : myList) {
+//            if (myMap.containsKey(a)) {
+//                myMap.put(a, myMap.get(a) + 1);
+//            } else {
+//                myMap.put(a, 1);
+//            }
+//            myMap.put(a, myMap.getOrDefault(a,0)+1);
+//        }
 
         //완주하지 못한 선수
-        String[] participant = {"leo","kiki","eden"};
-        String[] completion = {"eden","kiki"};
-        HashMap<String,Integer>map = new HashMap<>();
-        for(String player : participant){
-            map.put(player,map.getOrDefault(player,0) + 1);
-            for(String player : completion){
-                map.put(player, map.get(player)-1);
-                Iterator<Map.Entry<String,Integer>> iter = map.entrySet().iterator();
+//        String[] participant = {"leo","kiki","eden"};
+//        String[] completion = {"eden","kiki"};
+//        HashMap<String,Integer>map = new HashMap<>();
+//        for(String player : participant){
+//            map.put(player,map.getOrDefault(player,0) + 1);
+//            for(String player : completion){
+//                map.put(player, map.get(player)-1);
+//                Iterator<Map.Entry<String,Integer>> iter = map.entrySet().iterator();
+//
+//                while(iter.hasNext()){
+//                    Map.Entry<String, Integer> entry = iter.next();
+//                    if(entry.getValue() != 0){
+//                        answer = entry.getKey();
+//                        break;
+//                    }
+//                }
 
-                while(iter.hasNext()){
-                    Map.Entry<String, Integer> entry = iter.next();
-                    if(entry.getValue() != 0){
-                        answer = entry.getKey();
-                        break;
-                    }
-                }
-
-            }
-
-
+//            }
 
 
-        }
+
+
+
+//        }
+
     }
 }
