@@ -11,8 +11,8 @@ public class C09Map {
 //        System.out.println(mymap.get("baseball"));
 //
 //        //size(),isEmpty() 도 사용할 수 있다.
-        HashMap<String, String> mymap = null;
-        mymap.put("basketball", "탁구"); //put을 통해서 덮어쓰기, (이미 key가 있을경우)
+//        HashMap<String, String> mymap = null;
+//        mymap.put("basketball", "탁구"); //put을 통해서 덮어쓰기, (이미 key가 있을경우)
 //
 //        // mymap.putIfAbsent("baseball","배구"); // 없으면 넣어라.
 //        System.out.println(mymap);
@@ -34,11 +34,11 @@ public class C09Map {
 //
 //        }
         //iterator 을 통해 key값을 하나씩 출력.
-        mymap = new HashMap<>();
-        mymap.put("basketball", "농구");
-        mymap.put("baseball", "야구");
-        mymap.put("soccer", "축구");
-        Iterator<String> myIter = mymap.keySet().iterator();
+//        mymap = new HashMap<>();
+//        mymap.put("basketball", "농구");
+//        mymap.put("baseball", "야구");
+//        mymap.put("soccer", "축구");
+//        Iterator<String> myIter = mymap.keySet().iterator();
         //next() 메서드는 데이터를 소모시키면서 return
 //        System.out.println(myIter.next());
 //        System.out.println(myIter);
@@ -95,5 +95,30 @@ public class C09Map {
 
 //        }
 
+
+
+//        }
+        //LinkedHashMap : 데이터 삽입 순서 유지
+        Map<String,Integer> mymap = new LinkedHashMap<>();
+        mymap.put("Hello5" ,1);
+        mymap.put("Hello4" ,1);
+        mymap.put("Hello3" ,1);
+        mymap.put("Hello2" ,1);
+        mymap.put("Hello1" ,1);
+
+        System.out.println(mymap);
+//        {Hello5=1, Hello4=1, Hello3=1, Hello2=1, Hello1=1}
+
+
+        //treemap : 키를 통해 데이터 정렬
+        Map<String,Integer> mymap2 = new TreeMap<>();
+        mymap2.put("Hello5" ,1);
+        mymap2.put("Hello4" ,1);
+        mymap2.put("Hello3" ,1);
+        mymap2.put("Hello2" ,1);
+        mymap2.put("Hello1" ,1);
+
+        System.out.println(mymap2);//
+//        {Hello1=1, Hello2=1, Hello3=1, Hello4=1, Hello5=1}
     }
 }

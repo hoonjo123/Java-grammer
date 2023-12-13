@@ -221,20 +221,20 @@ public class C08List {
 //        System.out.println();
 
         //n의 배수 고르기
-        int[] numlist = {4,5,6,7,8,9,10,11,12};
-        List<Integer> new_number = new ArrayList<>();
-        int n = 3;
-        for(int i=0;i<numlist.length;i++){
-            if(numlist[i] % n ==0){
-                new_number.add(numlist[i]);
-            }
-        }
-        System.out.println(new_number);
-        int[] new_numlist = new int[new_number.size()];
-        for(int i=0; i<new_number.size(); i++){
-            new_numlist[i] = new_number.get(i);
-        }
-        System.out.println();
+//        int[] numlist = {4,5,6,7,8,9,10,11,12};
+//        List<Integer> new_number = new ArrayList<>();
+//        int n = 3;
+//        for(int i=0;i<numlist.length;i++){
+//            if(numlist[i] % n ==0){
+//                new_number.add(numlist[i]);
+//            }
+//        }
+//        System.out.println(new_number);
+//        int[] new_numlist = new int[new_number.size()];
+//        for(int i=0; i<new_number.size(); i++){
+//            new_numlist[i] = new_number.get(i);
+//        }
+//        System.out.println();
 
 
         //map

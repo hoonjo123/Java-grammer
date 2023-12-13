@@ -284,17 +284,17 @@ public class C07Array {
 //        System.out.println(Arrays.deepToString(arr4));
 //
                 //가변배열 만들기 : 전체사이즈는 5 , 각 배열마다 사이즈 1,2,3,4,5로 커지도록, 값은 count1 부터 시작해서...마지막찰때까지
-//
-                int[][] arr5 = new int[5][];
-                int count = 1;
-                for (int i = 0; i < arr5.length; i++) {
-                    arr5[i] = new int[i + 1];
-                    for (int j = 0; j < arr5[i].length; j++) {
-                        arr5[i][j] = count * 10;
-                    }
-                    count++;
-                }
-                System.out.println(Arrays.deepToString(arr5));
+////
+//                int[][] arr5 = new int[5][];
+//                int count = 1;
+//                for (int i = 0; i < arr5.length; i++) {
+//                    arr5[i] = new int[i + 1];
+//                    for (int j = 0; j < arr5[i].length; j++) {
+//                        arr5[i][j] = count * 10;
+//                    }
+//                    count++;
+//                }
+//                System.out.println(Arrays.deepToString(arr5));
 
 
             }
