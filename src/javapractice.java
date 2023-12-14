@@ -71,12 +71,12 @@ public class javapractice {
 //        }else{
 //            System.out.println(Integer.parseInt(ba));
 //        }
-
-        int a = 2;
-        int b = 91;
-        //result = 364;
-        String ab = String.valueOf(a) + String.valueOf(b);
-
+//
+//        int a = 2;
+//        int b = 91;
+//        //result = 364;
+//        String ab = String.valueOf(a) + String.valueOf(b);
+//
 
     }
 }
