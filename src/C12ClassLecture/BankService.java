@@ -14,6 +14,7 @@ class bankaccount {
     private int balacne;
     //별도의 생성자를 만들지 않으면 매개변수없는 기본생성자가 숨겨져있다.
 
+
     //예금
     public void deposit(int money){
         this.balacne += money;
