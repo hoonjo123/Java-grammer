@@ -125,10 +125,9 @@ class Post{
     private long id = 0;
     private String title = "";
     private String contents = "";
-    private long author_id = 0L;
     static Long static_id = 0L;
 
-    private Author author;
+    private long author_id;
 
     Post(){
 
