@@ -42,24 +42,6 @@ public class C1207RecurCombPermu {
         }
 
         //프로그래머스 구슬을 나누는 경우의 수
-//        class Solution {
-//            static int answer;
-//
-//            public int solution(int balls, int share) {
-//                answer = 0;
-//                recur(balls,share,0,0);
-//                return answer;
-//            }
-//            public void recur(int balls,int share,int start,int n){
-//                if(n==share){
-//                    answer ++;
-//                }
-//                for(int i=start; i<balls;i++){
-//                    recur(balls,share,i+1,n+1);
-//                }
-//            }
-//        }
-
 
 
     }

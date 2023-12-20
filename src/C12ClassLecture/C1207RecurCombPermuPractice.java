@@ -56,6 +56,7 @@ public class C1207RecurCombPermuPractice {
     static void permutation_quiz(List<Integer> myList, List<List<Integer>> combination_List, boolean[] visited, List<Integer> temp, int n){
         if(temp.size() == n){
             combination_List.add(new ArrayList<>(temp));
+
             return;
         }
     }
