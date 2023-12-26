@@ -30,7 +30,6 @@ public class C1505StreamAPI1 {
 //        int answer = Arrays.stream(arr1).sum();
 //        System.out.println(answer); //15
 
-
         //초기값을 지정하지 않으면 optional 객체 return
         //optional객체 : 값이 있을수도 있고, 없을수도 있다는 것을 명시한 타입
 //        String st1 = null;
