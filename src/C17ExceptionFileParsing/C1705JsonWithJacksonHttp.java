@@ -36,7 +36,7 @@ public class C1705JsonWithJacksonHttp {
 //            System.out.println(post1);
 
 //            readValue를 사용해서 객체로 곧바로 매핑
-            // getter는 필요하다.
+            //getter는 필요하다.
             //Post post2 = mapper.readValue(post,Post.class);
             //System.out.println(post2);
 
@@ -45,8 +45,14 @@ public class C1705JsonWithJacksonHttp {
             for(JsonNode j :jsonNode){
                 posts.add(mapper.readValue(j.toString(),Post.class));
             }
+
+            //자바 객체를 제이슨 데티터화 시킴 : 직렬화하는 과정
+            String serialized_data = mapper.writeValueAsString(posts);
+
+            System.out.println(posts);
+            System.out.println(serialized_data);
             System.out.println(posts.size());
-            System.out.println(posts.get(0));
+            System.out.println(posts.get(1));
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
