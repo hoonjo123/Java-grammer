@@ -2,31 +2,93 @@ package C17ExceptionFileParsing;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import sun.net.www.http.HttpClient;
 
 import java.io.IOException;
 import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.LinkedList;
+import java.util.List;
 
 public class C1705JsonWithJacksonHttp {
     public static void main(String[] args) {
-        //http클라이언트 생성
-//
-//        HttpClient client = HttpClient.newHTTPClinet();
-//        ObjectMapper mapper - new ObjectMapper();
-//        //http 요청객체 생성
-//        HttpRequest request = HttpRequest.newBuilder()
-//                .uri(URI.create("https://jsonplaceholder.typicode.com/posts/1"))
-//                .GET()
-//                .build();
-//        //http 응답객체 생성
-//        try {
-//            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-//            String post = response.body();
-//            JsonNode jsonNode = mapper.readTree(post);
-//        }catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
+        // http 클라이언트 생성
+        HttpClient client = HttpClient.newHttpClient();
+        // http 요청 객체 생성
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/posts"))
+                .GET()
+                .build();
+        // http 응답객체 생성
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
+            String post = response.body();
+//            System.out.println(post);
+            JsonNode jsonNode = mapper.readTree(post);
+//            Post post1 = new Post(jsonNode.get("userId").asInt()
+//                    ,jsonNode.get("id").asInt()
+//                    ,jsonNode.get("title").asText()
+//                    ,jsonNode.get("body").asText());
+//            System.out.println(post1);
+
+//            readValue를 사용해서 객체로 곧바로 매핑
+            // getter는 필요하다.
+            //Post post2 = mapper.readValue(post,Post.class);
+            //System.out.println(post2);
+
+            List<Post> posts = new LinkedList<>();
+            //JsonNode는 트리구조 이므로 아래와 같은 형식이 가능하다
+            for(JsonNode j :jsonNode){
+                posts.add(mapper.readValue(j.toString(),Post.class));
+            }
+            System.out.println(posts.size());
+            System.out.println(posts.get(0));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+}
+class Post<T>{
+    private T userId;
+    private T id;
+    private String title;
+    private String body;
+
+    public T getUserId() {
+        return userId;
+    }
+
+    public T getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    Post(){
+
+    }
+
+    Post(T userId, T id, String title,String body){
+        this.userId = userId;
+        this.id = id;
+        this.title = title;
+        this.body = body;
+    }
+    @Override
+    public String toString(){
+        return "userId : "+userId+"\nid: "+id+"\ntitle :"+title+"\nbody : "+body;
     }
 }
